@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Udeshan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Studio Udeshan Logo">
+            </div>
+            <div class="header-title">
+                <h1>Studio Udeshan</h1>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Studio Udeshan</h1>
+            <div class="services-box">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>
+                        <h4>Facilitating Artists of All Genres</h4>
+                        <p>We provide a creative environment for artists to compose and produce music, regardless of genre.</p>
+                    </li>
+                    <li>
+                        <h4>Music Composition</h4>
+                        <p>We compose music for commercials, jingles, teledramas, films, and other broadcast productions.</p>
+                    </li>
+                    <li>
+                        <h4>Multi-Track Live Simultaneous Recording</h4>
+                        <p>Using innovative techniques, we are capable of recording live bands, orchestras, and more.</p>
+                    </li>
+                    <li>
+                        <h4>Virtual Studio Technology (VST)</h4>
+                        <p>We offer endless possibilities to create great sound with live instruments and VST.</p>
+                    </li>
+                    <li>
+                        <h4>Digital Mixing and Mastering</h4>
+                        <p>Our state-of-the-art digital mixing and mastering services utilize Cubase, FL Studio, Wavelab, and Sound Forge.</p>
+                    </li>
+                    <li>
+                        <h4>Audio Restoration and Post-Production</h4>
+                        <p>We specialize in the restoration and post-production of audio to ensure the highest quality sound.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Studio Udeshan. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
