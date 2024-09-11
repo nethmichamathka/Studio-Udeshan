@@ -18,42 +18,90 @@
             </div>
         </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Studio Udeshan</h1>
-            <div class="services-box">
-                <h3>Our Services</h3>
-                <ul>
-                    <li>
-                        <h4>Facilitating Artists of All Genres</h4>
-                        <p>We provide a creative environment for artists to compose and produce music, regardless of genre.</p>
-                    </li>
-                    <li>
-                        <h4>Music Composition</h4>
-                        <p>We compose music for commercials, jingles, teledramas, films, and other broadcast productions.</p>
-                    </li>
-                    <li>
-                        <h4>Multi-Track Live Simultaneous Recording</h4>
-                        <p>Using innovative techniques, we are capable of recording live bands, orchestras, and more.</p>
-                    </li>
-                    <li>
-                        <h4>Virtual Studio Technology (VST)</h4>
-                        <p>We offer endless possibilities to create great sound with live instruments and VST.</p>
-                    </li>
-                    <li>
-                        <h4>Digital Mixing and Mastering</h4>
-                        <p>Our state-of-the-art digital mixing and mastering services utilize Cubase, FL Studio, Wavelab, and Sound Forge.</p>
-                    </li>
-                    <li>
-                        <h4>Audio Restoration and Post-Production</h4>
-                        <p>We specialize in the restoration and post-production of audio to ensure the highest quality sound.</p>
-                    </li>
+    <main>
+        <div class="hero">
+            <p class="welcome-message">Welcome to Studio Udeshan</p>
+            <div class="hero-content">
+                <div class="services-box">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>
+                            <h4>Facilitating Artists of All Genres</h4>
+                            <p>We provide a creative environment for artists to compose and produce music, regardless of genre.</p>
+                        </li>
+                        <li>
+                            <h4>Music Composition</h4>
+                            <p>We compose music for commercials, jingles, teledramas, films, and other broadcast productions.</p>
+                        </li>
+                        <li>
+                            <h4>Multi-Track Live Simultaneous Recording</h4>
+                            <p>Using innovative techniques, we are capable of recording live bands, orchestras, and more.</p>
+                        </li>
+                        <li>
+                            <h4>Virtual Studio Technology (VST)</h4>
+                            <p>We offer endless possibilities to create great sound with live instruments and VST.</p>
+                        </li>
+                        <li>
+                            <h4>Digital Mixing and Mastering</h4>
+                            <p>Our state-of-the-art digital mixing and mastering services utilize Cubase, FL Studio, Wavelab, and Sound Forge.</p>
+                        </li>
+                        <li>
+                            <h4>Audio Restoration and Post-Production</h4>
+                            <p>We specialize in the restoration and post-production of audio to ensure the highest quality sound.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <form action="/send-message" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        
+    </main>
+    
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Studio Udeshan Logo" class="footer-logo">
+                <p>&copy; 2024 Studio Udeshan. All Rights Reserved.</p>
+                <p><strong>Address:</strong> 1234 Music Lane, Sound City, CA 90001</p>
+                <p><strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM</p>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Us</h4>
+                <p><strong>Email:</strong> info@studioudeshan.com</p>
+                <p><strong>Phone:</strong> +1-800-123-4567</p>
+                <p><strong>Follow Us:</strong></p>
+                <ul class="social-links">
+                    <li><a href="#" title="Facebook">Facebook</a></li>
+                    <li><a href="#" title="Instagram">Instagram</a></li>
+                    <li><a href="#" title="Twitter">Twitter</a></li>
+                </ul>
+                <h4>Quick Links</h4>
+                <ul class="quick-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 Studio Udeshan. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
