@@ -3,105 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Udeshan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Simple Website</title>
+    <!-- Link to the CSS file in the static folder -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+
+    <!-- Header Section -->
     <header>
+        <div class="logo">
+            <!-- Corrected path to the logo -->
+            <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Website Logo" />
+        </div>
         <nav>
-            <div class="logo">
-                <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Studio Udeshan Logo">
-            </div>
-            <div class="header-title">
-                <h1>Studio Udeshan</h1>
-            </div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Main Section with Background Image -->
     <main>
         <div class="hero">
-            <p class="welcome-message">Welcome to Studio Udeshan</p>
-            <div class="hero-content">
-                <div class="services-box">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li>
-                            <h4>Facilitating Artists of All Genres</h4>
-                            <p>We provide a creative environment for artists to compose and produce music, regardless of genre.</p>
-                        </li>
-                        <li>
-                            <h4>Music Composition</h4>
-                            <p>We compose music for commercials, jingles, teledramas, films, and other broadcast productions.</p>
-                        </li>
-                        <li>
-                            <h4>Multi-Track Live Simultaneous Recording</h4>
-                            <p>Using innovative techniques, we are capable of recording live bands, orchestras, and more.</p>
-                        </li>
-                        <li>
-                            <h4>Virtual Studio Technology (VST)</h4>
-                            <p>We offer endless possibilities to create great sound with live instruments and VST.</p>
-                        </li>
-                        <li>
-                            <h4>Digital Mixing and Mastering</h4>
-                            <p>Our state-of-the-art digital mixing and mastering services utilize Cubase, FL Studio, Wavelab, and Sound Forge.</p>
-                        </li>
-                        <li>
-                            <h4>Audio Restoration and Post-Production</h4>
-                            <p>We specialize in the restoration and post-production of audio to ensure the highest quality sound.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Background image set via CSS -->
         </div>
-    
-        <section class="contact-us">
-            <h2>Contact Us</h2>
-            <form action="/send-message" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        
     </main>
-    
-    
 
+    <!-- Media Section -->
+    <section class="media">
+        <h2>Featured Media</h2>
+        <div class="media-content">
+            <!-- YouTube Video Embed -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <!-- Music Embed -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7lEptt4wbM0yJTvSG5EBof?utm_source=generator" width="100%" height="380" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Studio Udeshan Logo" class="footer-logo">
-                <p>&copy; 2024 Studio Udeshan. All Rights Reserved.</p>
-                <p><strong>Address:</strong> 1234 Music Lane, Sound City, CA 90001</p>
-                <p><strong>Working Hours:</strong> Mon-Fri: 9 AM - 6 PM</p>
-            </div>
-            <div class="footer-right">
-                <h4>Contact Us</h4>
-                <p><strong>Email:</strong> info@studioudeshan.com</p>
-                <p><strong>Phone:</strong> +1-800-123-4567</p>
-                <p><strong>Follow Us:</strong></p>
-                <ul class="social-links">
-                    <li><a href="#" title="Facebook">Facebook</a></li>
-                    <li><a href="#" title="Instagram">Instagram</a></li>
-                    <li><a href="#" title="Twitter">Twitter</a></li>
-                </ul>
-                <h4>Quick Links</h4>
-                <ul class="quick-links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>Sample footer text.</p>
+            <p><a href="#">Website Templates</a> created with Website Builder Software.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
