@@ -61,15 +61,34 @@ main .hero {
 
 /* Media Section Styling */
 section.media {
-    background-color: #f4f4f4;
+    background-color: #131942;
     padding: 40px 20px;
-    text-align: center;
+    text-align: left;
 }
 
 section.media h2 {
     margin-bottom: 20px;
-    font-size: 2rem;
-    color: #333;
+    font-size: 40px;
+    color: #cbc6c6;
+    text-align: left;
+}
+
+section.media p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #cbc6c6;
+    text-align: left;
+}
+
+/* Form Styling */
+form {
+    width: 50%; /* Form width is half of the webpage */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 20px;
+    background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
+
 }
 
 .media-content iframe {
@@ -77,6 +96,7 @@ section.media h2 {
     display: block;
     max-width: 100%;
 }
+
 
 /* Scroll-to-Top Button */
 #scrollTopBtn {
