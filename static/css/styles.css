@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -50,7 +49,7 @@ header nav ul li a {
 main .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('../photos/background.jpg'); /* Ensure correct path */
+    background-image: url('../photos/photo1.jpg'); /* Ensure correct path */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -64,6 +63,45 @@ section.media {
     background-color: #131942;
     padding: 40px 20px;
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px; /* Space between text and image */
+}
+
+/* Media Section Styling */
+section.mediacenter {
+    background-color: #131942;
+    padding: 40px 20px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px; /* Space between text and image */
+}
+
+section.media form {
+    flex: 1; /* Take up space available */
+    padding-right: 20px; /* Space between form and image */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 10px; /* Round corners */
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect for a frosted glass look */
+}
+
+/* Align image to the right */
+form.media2 {
+    flex: 200; /* Make the image section flexible */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+}
+
+form.media2 img {
+    width: 100%;
+    max-width: 600px; /* Limit image width */
+    height: auto;
+    border-radius: 10px; /* Add rounding */
+    background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
 }
 
 section.media h2 {
@@ -80,23 +118,29 @@ section.media p {
     text-align: left;
 }
 
-/* Form Styling */
-form {
-    width: 50%; /* Form width is half of the webpage */
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left;
-    border-radius: 20px;
-    background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
-
+/* Align image to the right */
+form.media1 {
+    flex: 1; /* Make the image section flexible */
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
 }
 
+form.media1 img {
+    width: 100%;
+    max-width: 600px; /* Limit image width */
+    height: auto;
+    border-radius: 10px; /* Add rounding */
+    background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
+}
+
+
+/* Media Content (Spotify Embed) */
 .media-content iframe {
     margin: 20px auto;
     display: block;
     max-width: 100%;
 }
-
 
 /* Scroll-to-Top Button */
 #scrollTopBtn {
@@ -162,6 +206,14 @@ footer .footer-text {
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    section.media {
+        flex-direction: column; /* Stack form and image vertically on small screens */
+    }
+
+    form.media1 {
+        justify-content: center; /* Center the image on small screens */
     }
 
     footer {
