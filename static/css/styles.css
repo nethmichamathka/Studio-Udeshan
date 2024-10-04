@@ -69,7 +69,6 @@ section.media {
     gap: 30px; /* Space between text and image */
 }
 
-/* Media Section Styling */
 section.mediacenter {
     background-color: #131942;
     padding: 40px 20px;
@@ -133,7 +132,6 @@ form.media1 img {
     border-radius: 10px; /* Add rounding */
     background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
 }
-
 
 /* Media Content (Spotify Embed) */
 .media-content iframe {
