@@ -45,30 +45,180 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Main Section */
+/* Hero Section Styling */
 main .hero {
     width: 100%;
     height: 100vh;
-    background-image: url('../photos/photo1.jpg'); /* Ensure correct path */
+    background-image: url('../photos/photo1.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.welcome-message h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    animation: fadeInDown 1.5s ease;
+}
+
+.welcome-message p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 2s ease;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(45deg, #ff7f7f, #ff1f1f);
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: fadeInUp 2.5s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #ff1f1f, #ff7f7f);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Services Section Styling */
+section.media {
+    background-color: #211c3e; /* Light background for contrast */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section.media h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #fffefe;
+}
+
+section.media p {
+    font-size: 25px;
+    margin: 0 0 20px;
+    color: #fafafa;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.service-item i {
+    font-size: 3rem;
+    color: #ff7f7f; /* Icon color */
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hover Effect */
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to service items */
+.service-item {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.service-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.service-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.service-item:nth-child(5) {
+    animation-delay: 0.5s;
 }
 
 /* Media Section Styling */
-section.media {
-    background-color: #131942;
-    padding: 40px 20px;
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 30px; /* Space between text and image */
-}
-
 section.mediacenter {
     background-color: #131942;
     padding: 40px 20px;
@@ -79,7 +229,7 @@ section.mediacenter {
     gap: 30px; /* Space between text and image */
 }
 
-section.media form {
+section.media1, section.media2 {
     flex: 1; /* Take up space available */
     padding-right: 20px; /* Space between form and image */
     background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
@@ -87,45 +237,9 @@ section.media form {
     backdrop-filter: blur(10px); /* Optional: Adds a blur effect for a frosted glass look */
 }
 
-/* Align image to the right */
-form.media2 {
-    flex: 200; /* Make the image section flexible */
-    display: flex;
-    justify-content: flex-end; /* Align image to the right */
-    align-items: center;
-}
-
+/* Align image to the right for media1 and media2 */
+form.media1 img,
 form.media2 img {
-    width: 100%;
-    max-width: 600px; /* Limit image width */
-    height: auto;
-    border-radius: 10px; /* Add rounding */
-    background-color: rgba(208, 195, 195, 0.1); /* Transparent background */
-}
-
-section.media h2 {
-    margin-bottom: 20px;
-    font-size: 40px;
-    color: #cbc6c6;
-    text-align: left;
-}
-
-section.media p {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #cbc6c6;
-    text-align: left;
-}
-
-/* Align image to the right */
-form.media1 {
-    flex: 1; /* Make the image section flexible */
-    display: flex;
-    justify-content: flex-end; /* Align image to the right */
-    align-items: center;
-}
-
-form.media1 img {
     width: 100%;
     max-width: 600px; /* Limit image width */
     height: auto;
@@ -156,46 +270,29 @@ form.media1 img {
     padding: 15px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
 }
 
 #scrollTopBtn:hover {
     background-color: #555;
 }
 
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
-}
-
-footer .social-icons {
-    margin-bottom: 10px;
-}
-
-footer .social-icons a {
+/* Mobile Navigation Toggle */
+#mobileNavToggle {
+    display: none;
+    font-size: 2rem;
     color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-footer .footer-text a {
-    color: #ff7f7f;
-    text-decoration: none;
+header nav ul.active {
+    display: block;
 }
 
-footer .footer-text a:hover {
-    text-decoration: underline;
-}
-
-footer .footer-text {
-    font-size: 0.9rem;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -210,11 +307,39 @@ footer .footer-text {
         flex-direction: column; /* Stack form and image vertically on small screens */
     }
 
-    form.media1 {
+    form.media1,
+    form.media2 {
         justify-content: center; /* Center the image on small screens */
     }
 
     footer {
         padding: 15px 0;
     }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    #mobileNavToggle {
+        display: block;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }

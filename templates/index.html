@@ -6,6 +6,8 @@
     <title>Studio Udeshan</title>
     <!-- Link to the CSS file in the static folder -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -18,6 +20,9 @@
         <nav>
             <ul>
                 <li><a href="#">HOME</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
     </header>
@@ -25,9 +30,14 @@
     <!-- Main Section with Background Image -->
     <main>
         <div class="hero">
-            <!-- Background image set via CSS -->
+            <div class="welcome-message">
+                <h1>Welcome to Studio Udeshan</h1>
+                <p>Where Creativity Meets Innovation in Music Production</p>
+                <a href="#services" class="cta-button">Explore Our Services</a>
+            </div>
         </div>
     </main>
+    
 
     <!-- Media Section -->
     <section class="media">
@@ -35,28 +45,24 @@
         <h2>Our Services</h2>
         <p>Facilitating artists of all genres to compose and produce music</p>
         <p>Composing music for commercials, jingles, teledramas / films, broadcast productions and etc.</p>
-        <p>Multi tracks live simultaneous recording using innovative techniques (capable of recording live bands, orchestras etc.)</p>
-        <p>Endless possibilities to create great sound with live instruments and Virtual Studio Technology (VST)</p>
-        <p>Providing the finest digital mixing and mastering services with Cubase, FL Studio, Wavelab and Sound Forge</p>
-        <p>Restoration and post - production of audio</p>
+        <p>Multi-track live simultaneous recording using innovative techniques for bands, orchestras, and more.</p>
+        <p>Create great sound with live instruments and Virtual Studio Technology (VST).</p>
+        <p>Top-tier digital mixing and mastering services using Cubase, FL Studio, Wavelab, and Sound Forge.</p>
+        <p>Audio restoration and post-production services.</p>
     </form>
-
-    <form class="media1">
-        <!-- Add the image inside this section -->
-        <img src="{{ url_for('static', filename='photos/background.jpg') }}" alt="Media Image 1" />
-    </form>
-
     </section>
 
-<section class="mediacenter">
+    <section class="mediacenter">
+        <form class="media1">
+            <!-- Add the image inside this section -->
+            <img src="{{ url_for('static', filename='photos/background.jpg') }}" alt="Media Image 1" />
+        </form>
+
         <form class="media2">
             <!-- Add the image inside this section -->
-            <img src="{{ url_for('static', filename='photos/photo2.jpg') }}" alt="Media Image 1" />
+            <img src="{{ url_for('static', filename='photos/photo2.jpeg') }}" alt="Media Image 2" />
         </form>
-        
     </section>
-
-    
 
     <!-- Footer Section -->
     <footer>
@@ -68,11 +74,11 @@
             <a href="#"><i class="fa fa-google-plus"></i></a>
         </div>
         <div class="footer-text">
-            <p>Sample footer text.</p>
-            <p><a href="#">Website Templates</a> created with Website Builder Software.</p>
+            <p>&copy; 2024 Studio Udeshan. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a></p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
