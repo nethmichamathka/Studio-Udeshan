@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fade-in effect for Welcome Message
-    const welcomeMessage = document.querySelector('.hero .welcome-message');
+    // Fade-in effect for the welcome message in the hero section
+    const welcomeMessage = document.querySelector('.welcome-message');
+
+    // Wait for the content to load and then apply the fade-in effect
     if (welcomeMessage) {
-        setTimeout(() => {
-            welcomeMessage.classList.add('visible');
-        }, 200); // Delay to trigger the fade-in effect
+        setTimeout(function() {
+            welcomeMessage.classList.add('fade-in');
+        }, 300); // Delay to make sure everything is loaded before animation starts
     }
 
     // Animation for Service Items
