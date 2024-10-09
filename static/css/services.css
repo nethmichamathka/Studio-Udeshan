@@ -64,9 +64,18 @@ main .hero {
     color: white;
 }
 
+/* Welcome Message Fade-in */
 .hero .welcome-message {
-    max-width: 600px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+.hero .welcome-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .hero h1 {
     font-size: 50px;
@@ -167,5 +176,116 @@ footer .footer-text p {
 
     .media {
         padding: 20px 10px;
+    }
+}
+
+/* Services Section Styles */
+.services {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #ff6347;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Hover effect for each service item */
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ff6347;
+    color: white;
+}
+
+.service-item:hover i {
+    color: white;
+}
+
+.service-item:hover h3,
+.service-item:hover p {
+    color: white;
+}
+
+/* Service Item Animation */
+.service-item {
+    opacity: 0;
+    transform: translateY(20px); /* Start with a slight downward position */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
+}
+
+.service-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Bring to original position */
+}
+
+/* Scroll to Top Button Styling */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6347;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:hover {
+    background-color: #e5533c;
+}
+
+/* Mobile-friendly Design */
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-list {
+        grid-template-columns: 1fr;
     }
 }

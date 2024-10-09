@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Udeshan</title>
-    <!-- Link to the CSS file in the static folder -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- Link to Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -14,7 +12,6 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <!-- Corrected path to the logo -->
             <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Website Logo" />
         </div>
         <nav>
@@ -25,41 +22,27 @@
                 <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
             </ul>
         </nav>
-        
     </header>
 
     <!-- Main Section with Background Image -->
     <main>
         <div class="hero">
-            <div class="welcome-message">
+            <div class="welcome-message animate-on-scroll">
                 <h1>Welcome to Studio Udeshan</h1>
                 <p>Where Creativity Meets Innovation in Music Production</p>
-                <a href="#services" class="cta-button">Explore Our Services</a>
+                <a href="{{ url_for('services') }}" class="cta-button">Explore Our Services</a>
             </div>
         </div>
     </main>
-    
+
     <!-- Who We Are Section -->
-    <section class="media">
+    <section class="media animate-on-scroll">
         <h2>Who We Are</h2>
         <p>At <strong>Studio Udeshan</strong>, we are passionate about the art of sound. Our state-of-the-art recording studio, nestled in the heart of [Your Location], is dedicated to providing a creative and dynamic space for musicians, producers, and artists to bring their visions to life.</p>
 
         <p>Founded by [Founder Name], a visionary in the field of music production, Studio Udeshan has quickly become a go-to hub for artists of all genres. We offer an array of professional services, from music composition and production to audio mixing and mastering, all tailored to meet the needs of today’s evolving music industry.</p>
     </section>
 
-    <section class="mediacenter">
-        <form class="media1">
-            <!-- Add the image inside this section -->
-            <img src="{{ url_for('static', filename='photos/background.jpg') }}" alt="Media Image 1" />
-        </form>
-
-        <form class="media2">
-            <!-- Add the image inside this section -->
-            <img src="{{ url_for('static', filename='photos/photo2.jpeg') }}" alt="Media Image 2" />
-        </form>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
         <div class="social-icons">
             <a href="#"><i class="fa fa-facebook"></i></a>
