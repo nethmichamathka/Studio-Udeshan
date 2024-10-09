@@ -3,48 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Udeshan - Services</title>
-    <!-- Link to the CSS file in the static folder -->
+    <title>Services - Studio Udeshan</title>
+    
+    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- Link to Google Fonts and Font Awesome -->
+
+    <!-- Link to Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Optionally, you can include custom JavaScript here or in the external JS file -->
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header with navigation -->
     <header>
         <div class="logo">
-            <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Website Logo" />
+            <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="Website Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>  <!-- This link navigates to Home -->
+                <li><a href="{{ url_for('services') }}">SERVICES</a></li>
+                <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Section for Services -->
+    <!-- Main Content Section -->
     <main>
         <div class="hero">
             <div class="welcome-message">
                 <h1>Our Services</h1>
-                <p>Explore the range of services we offer at Studio Udeshan.</p>
+                <p>Explore the services we offer at Studio Udeshan.</p>
             </div>
         </div>
         
-        <!-- Services Section -->
-        <section class="media">
-            <h2>Our Services</h2>
-            <p>Facilitating artists of all genres to compose and produce music</p>
-            <p>Composing music for commercials, jingles, teledramas / films, broadcast productions and more</p>
-            <p>Multi-track live simultaneous recording using innovative techniques for bands, orchestras, and more</p>
-            <p>Sound creation with live instruments and Virtual Studio Technology (VST)</p>
-            <p>Top-tier digital mixing and mastering services using Cubase, FL Studio, Wavelab, and Sound Forge</p>
-            <p>Audio restoration and post-production services</p>
-        </section>
+        <!-- Services List -->
+        <!-- Services List -->
+<section class="services">
+    <h2>What We Do</h2>
+    <ul class="services-list">
+        <li class="service-item">
+            <i class="fa fa-music"></i>
+            <h3>Music Composition</h3>
+            <p>We create original compositions tailored to your vision, whether for albums, films, or commercials.</p>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-microphone"></i>
+            <h3>Audio Mixing</h3>
+            <p>Professional audio mixing for a clear, balanced sound that brings your music to life.</p>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-headphones"></i>
+            <h3>Audio Mastering</h3>
+            <p>We refine your tracks to perfection, ensuring they sound great across all platforms.</p>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-music"></i>
+            <h3>Live Recording</h3>
+            <p>Multi-track live simultaneous recording for bands, orchestras, and more.</p>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-wrench"></i>
+            <h3>Sound Restoration</h3>
+            <p>Restoring old or damaged audio to its original quality with advanced technology.</p>
+        </li>
+        <li class="service-item">
+            <i class="fa fa-film"></i>
+            <h3>Custom Soundtracks</h3>
+            <p>Creating original soundtracks for films, commercials, and media projects.</p>
+        </li>
+    </ul>
+</section>
+
     </main>
 
     <!-- Footer Section -->
@@ -62,6 +94,7 @@
         </div>
     </footer>
 
+    <!-- Include JavaScript File -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

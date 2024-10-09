@@ -19,12 +19,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('services') }}">SERVICES</a></li>
+                <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
             </ul>
         </nav>
+        
     </header>
 
     <!-- Main Section with Background Image -->
