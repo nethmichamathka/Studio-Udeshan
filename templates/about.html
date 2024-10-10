@@ -3,42 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Us - [Your Studio Name]</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a CSS file named styles.css -->
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="your-logo.png" alt="[Your Studio Name] Logo">
+            <img src="{{ url_for('static', filename='photos/logo.jpg') }}" alt="[Your Studio Name] Logo" />
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- About Us Section -->
-    <section id="about-us" class="about-us">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Welcome to <strong>[Your Studio Name]</strong>, where music meets innovation and passion. Our state-of-the-art recording studio is dedicated to fostering creativity, enabling artists from all genres to bring their musical visions to life.</p>
+    <!-- Main Section with Hero -->
+    <main>
+        <div class="hero">
+            <div class="welcome-message animate-on-scroll">
+                <h1>About Us</h1>
+                <p>Where Sound Meets Creativity and Innovation</p>
+                <p>At [Your Studio Name], we're more than just a recording studio. We're a creative space where musicians, artists, and producers collaborate to bring their musical visions to life.</p>
+            </div>
+        </div>
+    </main>
 
-            <h3>Who We Are</h3>
-            <p>Founded by a team of seasoned sound engineers, producers, and musicians, <strong>[Your Studio Name]</strong> is more than just a recording space—it's a hub of creativity and collaboration. We offer a wide array of services, from music composition and production to post-production audio restoration. Whether you're an established artist or just starting out, we have the tools and expertise to support your musical journey.</p>
+    <!-- About Us Section (Who We Are) -->
+    <section class="about-us-section">
+        <div class="container">
+            <div class="about-header">
+                <h2 class="section-title animate-on-scroll">Who We Are</h2>
+                <p class="section-subtitle animate-on-scroll">We are a passionate team of creators dedicated to bringing your music to life.</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p>At <strong>[Your Studio Name]</strong>, we believe in the power of music to inspire, connect, and transform. Our studio is equipped with the latest technology and driven by a team of talented professionals who are experts in their craft.</p>
+                    <p>Founded by [Founder Name], a visionary in the field of music production, our studio has become a trusted hub for musicians, producers, and artists across all genres.</p>
+                    <h3>Our Mission</h3>
+                    <p>Our mission is simple: to offer a state-of-the-art environment where creativity thrives, and artists can bring their musical visions to life, no matter the genre.</p>
+                    <h3>Meet the Team</h3>
+                    <p>Our dedicated team of engineers, producers, and musicians is here to guide you every step of the way—from the initial concept to the final mix.</p>
+                </div>
+
+                <div class="team-photos animate-on-scroll">
+                    <div class="team-member">
+                        <img src="team-member1.jpg" alt="Team Member 1">
+                        <p>John Doe – Founder & Lead Producer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="team-member2.jpg" alt="Team Member 2">
+                        <p>Jane Smith – Senior Audio Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="team-member3.jpg" alt="Team Member 3">
+                        <p>Mark Lee – Music Producer</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 [Your Studio Name]. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 [Your Studio Name]. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a></p>
+        </div>
     </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>

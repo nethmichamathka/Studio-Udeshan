@@ -1,0 +1,154 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0a500;
+}
+
+.hero {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero .welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero .welcome-message p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+.about-us-section {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-header .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-header .section-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.about-text {
+    width: 60%;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #f0a500;
+}
+
+.team-photos {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #f0a500;
+}
+
+footer .footer-text p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+footer .footer-text a {
+    color: #f0a500;
+    text-decoration: none;
+}
