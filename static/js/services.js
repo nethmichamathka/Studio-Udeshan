@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fade-in effect for the welcome message in the hero section
+    // Animation for the Hero Section Welcome Message
     const welcomeMessage = document.querySelector('.welcome-message');
 
-    // Wait for the content to load and then apply the fade-in effect
     if (welcomeMessage) {
+        // Add fade-in animation for the welcome message
         setTimeout(function() {
             welcomeMessage.classList.add('fade-in');
         }, 300); // Delay to make sure everything is loaded before animation starts
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animation for Service Items
     const serviceItems = document.querySelectorAll('.service-item');
 
-    // Fade-in effect when the service items come into view
+    // IntersectionObserver for scrolling animation of service items
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
 
+    // Observe each service item
     serviceItems.forEach(item => {
         observer.observe(item);
     });

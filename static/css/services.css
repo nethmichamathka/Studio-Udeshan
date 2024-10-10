@@ -297,3 +297,68 @@ footer .footer-text p {
 .welcome-message.fade-in {
     animation: fadeIn 1.2s ease-out forwards;
 }
+
+/* Basic Fade-in Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When the element comes into view */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide to original position */
+}
+
+/* Hero Section Welcome Message Fade-in */
+.welcome-message.fade-in {
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional Styles (Optional) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.hero-section {
+    background: #f5f5f5; /* Light background for hero section */
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Ensure that elements are initially hidden */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Scroll-based Visibility */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
