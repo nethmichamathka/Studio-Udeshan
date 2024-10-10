@@ -178,14 +178,14 @@ footer .footer-text p {
 /* Services Section Styles */
 .services {
     padding: 50px 20px;
-    background-color: #f9f9f9;
+    background-color: #000; /* Black background for Services section */
     text-align: center;
 }
 
 .services h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: white; /* White color for the title */
 }
 
 .services-list {
@@ -198,7 +198,7 @@ footer .footer-text p {
 }
 
 .service-item {
-    background-color: #fff;
+    background-color: #333; /* Dark background for service items */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -214,13 +214,13 @@ footer .footer-text p {
 
 .service-item h3 {
     font-size: 24px;
-    color: #333;
+    color: white; /* White color for service headings */
     margin-bottom: 10px;
 }
 
 .service-item p {
     font-size: 16px;
-    color: #555;
+    color: #ccc; /* Light color for description */
     line-height: 1.5;
 }
 

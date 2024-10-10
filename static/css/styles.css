@@ -100,17 +100,19 @@ main .hero {
 .media {
     padding: 50px 20px;
     text-align: center;
+    background-color: black; /* Set the background to black */
+    color: white; /* Set the text color to white */
 }
 
 .media h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: white; /* Set the heading text color to white */
 }
 
 .media p {
     font-size: 18px;
-    color: #555;
+    color: #ddd; /* Lighter color for paragraphs to contrast the black background */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -181,7 +183,7 @@ footer .footer-text p {
     bottom: 20px;
     right: 20px;
     background-color: #007BFF;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 50%;
     padding: 10px;

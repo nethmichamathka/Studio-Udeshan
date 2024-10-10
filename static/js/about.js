@@ -1,24 +1,69 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Animation on scroll for the "Welcome" section and "Who We Are" section
-    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-    
-    // Function to check whether an element is in the viewport
-    const handleScrollAnimation = () => {
-        elementsToAnimate.forEach((element) => {
-            const rect = element.getBoundingClientRect();
-            // If the element is within the viewport, add 'visible' class
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                element.classList.add('visible');
-            } else {
-                // Remove the 'visible' class if the element is out of view
-                element.classList.remove('visible');
+document.addEventListener("DOMContentLoaded", function () {
+    // Animation for the Hero Section Welcome Message
+    const welcomeMessage = document.querySelector('.welcome-message');
+
+    if (welcomeMessage) {
+        // Add fade-in animation for the welcome message
+        setTimeout(function() {
+            welcomeMessage.classList.add('fade-in');
+        }, 300); // Delay to make sure everything is loaded before animation starts
+    }
+
+    // Animation for Service Items
+    const serviceItems = document.querySelectorAll('.service-item');
+
+    // IntersectionObserver for scrolling animation of service items
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    };
+    }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
 
-    // Initialize the scroll animation for elements when they appear on the screen
-    window.addEventListener('scroll', handleScrollAnimation);
-    
-    // Initial check in case elements are already in view when the page loads
-    handleScrollAnimation();
+    // Observe each service item
+    serviceItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Smooth Scroll for the "Explore Our Services" button in the hero section
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Scroll to Services Section
+            const servicesSection = document.querySelector('.services');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
+        });
+    }
+
+    // Scroll to top functionality
+    const scrollToTopButton = document.createElement('button');
+    scrollToTopButton.innerHTML = '<i class="fa fa-arrow-up"></i>';
+    scrollToTopButton.classList.add('scroll-to-top');
+    document.body.appendChild(scrollToTopButton);
+
+    // Show the scroll-to-top button when scrolling
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    });
+
+    // Smooth Scroll to Top
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
