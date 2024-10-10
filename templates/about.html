@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -16,24 +16,25 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('services') }}">Services</a></li>
-                <li><a href="{{ url_for('about') }}" class="active">About Us</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('services') }}">SERVICES</a></li>
+                <li><a href="{{ url_for('about') }}" class="active">ABOUT</a></li>
+                <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Section with Hero -->
-    <main>
-        <div class="hero">
-            <div class="welcome-message animate-on-scroll">
-                <h1>About Us</h1>
-                <p>Where Sound Meets Creativity and Innovation</p>
-                <p>At [Your Studio Name], we're more than just a recording studio. We're a creative space where musicians, artists, and producers collaborate to bring their musical visions to life.</p>
-            </div>
+<!-- Main Section with Hero -->
+<main>
+    <div class="hero">
+        <div class="welcome-message animate-on-scroll">
+            <h1>About Us</h1>
+            <p>Where Sound Meets Creativity and Innovation</p>
+            <p>At [Your Studio Name], we're more than just a recording studio. We're a creative space where musicians, artists, and producers collaborate to bring their musical visions to life.</p>
         </div>
-    </main>
+    </div>
+</main>
+
 
     <!-- About Us Section (Who We Are) -->
     <section class="about-us-section">
@@ -56,15 +57,21 @@
                 <div class="team-photos animate-on-scroll">
                     <div class="team-member">
                         <img src="team-member1.jpg" alt="Team Member 1">
-                        <p>John Doe – Founder & Lead Producer</p>
+                        <div class="member-info">
+                            <p><strong>John Doe</strong><br>Founder & Lead Producer</p>
+                        </div>
                     </div>
                     <div class="team-member">
                         <img src="team-member2.jpg" alt="Team Member 2">
-                        <p>Jane Smith – Senior Audio Engineer</p>
+                        <div class="member-info">
+                            <p><strong>Jane Smith</strong><br>Senior Audio Engineer</p>
+                        </div>
                     </div>
                     <div class="team-member">
                         <img src="team-member3.jpg" alt="Team Member 3">
-                        <p>Mark Lee – Music Producer</p>
+                        <div class="member-info">
+                            <p><strong>Mark Lee</strong><br>Music Producer</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,7 +93,7 @@
         </div>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
 
 </body>
 </html>
